@@ -8,6 +8,7 @@ public class Medicine {
     private int powerOfMedicine;
     private boolean doesExist;
     private double price;
+    private int drugIntakeIntervals;
 
     public Medicine(String name, DrugForm drugForm, int powerOfMedicine) {
         this.name = name;
@@ -76,6 +77,14 @@ public class Medicine {
         this.price = price;
     }
 
+    public int getDrugIntakeIntervals() {
+        return drugIntakeIntervals;
+    }
+
+    public void setDrugIntakeIntervals(int drugIntakeIntervals) {
+        this.drugIntakeIntervals = drugIntakeIntervals;
+    }
+
     @Override
     public String toString() {
         return
@@ -83,5 +92,15 @@ public class Medicine {
                 "\tdrugForm: " + drugForm +
                 "\tpowerOfMedicine: " + powerOfMedicine
                 ;
+    }
+
+
+    public String details(){
+        return  "\n\tname of medicine: " + name +
+                "\tdrugForm: " + drugForm +
+                "\tpowerOfMedicine: " + powerOfMedicine +
+                "\tconsumption instruction: " + consumptionInstruction+
+                "\tdrug intake intervals: " + drugIntakeIntervals +
+                "\tprice: " + price;
     }
 }
