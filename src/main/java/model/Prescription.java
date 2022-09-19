@@ -7,11 +7,11 @@ public class Prescription {
     private String doctorFirstName;
     private String doctorLastName;
     private Date date;
-    private Patient patient;
+    private User patient; //todo:mikham begam user inja az type patiente vali nemidoonam chejoori |:
     private List<Medicine> medicines;
     private double totalPrice;
 
-    public Prescription(String doctorFirstName, String doctorLastName, Date date, Patient patient, List<Medicine> medicines) {
+    public Prescription(String doctorFirstName, String doctorLastName, Date date, User patient, List<Medicine> medicines) {
         this.doctorFirstName = doctorFirstName;
         this.doctorLastName = doctorLastName;
         this.date = date;
@@ -43,11 +43,11 @@ public class Prescription {
         this.date = date;
     }
 
-    public Patient getPatient() {
+    public User getPatient() {
         return patient;
     }
 
-    public void setPatient(Patient patient) {
+    public void setPatient(User patient) {
         this.patient = patient;
     }
 
