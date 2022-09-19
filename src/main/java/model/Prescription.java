@@ -1,5 +1,7 @@
 package model;
 
+import model.enums.UserType;
+
 import java.util.Date;
 import java.util.List;
 
@@ -48,6 +50,7 @@ public class Prescription {
     }
 
     public void setPatient(User patient) {
+        patient.setUserType(UserType.PATIENT);
         this.patient = patient;
     }
 
