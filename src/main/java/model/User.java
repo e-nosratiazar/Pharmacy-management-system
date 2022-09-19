@@ -11,6 +11,15 @@ public class User {
     private String password;
     private UserType userType;
 
+    public User(String firstName, String lastName, int age, String nationalCode, String userName, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.nationalCode = nationalCode;
+        this.userName = userName;
+        this.password = password;
+    }
+
     public User(String firstName, String lastName, int age, String nationalCode, String userName, String password, UserType userType) {
         this.firstName = firstName;
         this.lastName = lastName;
