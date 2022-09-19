@@ -4,6 +4,7 @@ import model.User;
 import util.Application;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class AdminRepository {
@@ -19,4 +20,17 @@ public class AdminRepository {
         preparedStatement.setString(7,admin.getUserType().toString());
         return preparedStatement.executeUpdate();
     }
+
+    public boolean findUsernameAndPassword(String username,String password) throws SQLException {
+        boolean found=false;
+        String sql="select id from t_user where username=? and password=?";
+        PreparedStatement preparedStatement = Application.getConnection().prepareStatement(sql);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        if (resultSet.next()){
+            found=true;
+        }
+        return found;
+    }
+
+
 }
